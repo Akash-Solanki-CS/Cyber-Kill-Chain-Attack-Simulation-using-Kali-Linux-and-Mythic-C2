@@ -87,10 +87,13 @@ A Mythic Apollo payload was generated and delivered to the Windows machine using
 ```bash
 python3 -m http.server 9999
 ```
+---
 
 ## 6. Payload Execution
 
 The payload was executed on the victim machine, establishing communication with the Mythic C2 server.
+
+---
 
 ## 7. Command and Control (C2)
 
@@ -102,23 +105,27 @@ File browsing
 File upload/download
 Remote shell access
 
+---
+
 ## 8. Data Exfiltration
 
 Sensitive files were downloaded from the compromised Windows machine to simulate data theft.
 
-🧠 Cyber Kill Chain Mapping
-Cyber Kill Chain Phase	Project Activity
-Reconnaissance	Target Identification
-Weaponization	Mythic Apollo Payload Creation
-Delivery	Payload Transfer
-Exploitation	RDP Access & Payload Execution
-Installation	Apollo Agent Execution
-Command & Control	Mythic Session Established
-Actions on Objectives	Sensitive File Exfiltration
+# 🧠 Cyber Kill Chain Mapping
 
+| Cyber Kill Chain Phase | Project Activity |
+|------------------------|------------------|
+| Reconnaissance | Target Identification |
+| Weaponization | Mythic Apollo Payload Creation |
+| Delivery | Payload Transfer |
+| Exploitation | RDP Access & Payload Execution |
+| Installation | Apollo Agent Execution |
+| Command & Control | Mythic Session Established |
+| Actions on Objectives | Sensitive File Exfiltration |
 
+---
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 This project was developed strictly for educational purposes and authorized lab testing only.
 
@@ -126,7 +133,9 @@ The tools and techniques demonstrated in this repository should not be used agai
 
 The author is not responsible for any misuse of this project.
 
-👨‍💻 Author
+---
+
+## 👨‍💻 Author
 
 Solanki Aakash Girishbhai
 Cyber Security Student
